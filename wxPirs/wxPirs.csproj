@@ -33,11 +33,17 @@
     <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SongDtaExtractor.cs" />
+    <Compile Include="SongDtaExtractor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="wxPirs.Properties\Resources.cs" />
     <Compile Include="wxPirs.Properties\Settings.cs" />
-    <Compile Include="wxPirs\AboutBox.cs" />
-    <Compile Include="wxPirs\MainForm.cs" />
+    <Compile Include="wxPirs\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wxPirs\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="wxPirs\Program.cs" />
     <Compile Include="WxTools\WxReader.cs" />
   </ItemGroup>

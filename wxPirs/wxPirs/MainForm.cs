@@ -511,16 +511,18 @@ namespace wxPirs
 
     private DateTime dosDateTime(int datetime)
     {
-      return this.dosDateTime((short) (datetime >> 16), (short) (datetime - (datetime >> 16 << 16)));
+        return DateTime.Now;
+        //return this.dosDateTime((short)(datetime >> 16), (short)(datetime - (datetime >> 16 << 16)));
     }
 
     private DateTime dosDateTime(short date, short time)
     {
-      if ((int) date == 0 && (int) time == 0)
         return DateTime.Now;
-      else
-          //return new DateTime((((int)date & 65024) >> 9) + 1980, ((int)date & 480) >> 5, (int)(date & 31) + 1, ((int)time & 63488) >> 11, ((int)time & 2016) >> 5, ((int)time & 31) * 2); 
-      return new DateTime((((int)date & 65024) >> 9) + 1980, ((int)date & 480) >> 5, 1, 11,11,11);
+      //  if ((int)date == 0 && (int)time == 0)
+      //  return DateTime.Now;
+      //else
+      //    //return new DateTime((((int)date & 65024) >> 9) + 1980, ((int)date & 480) >> 5, (int)(date & 31) + 1, ((int)time & 63488) >> 11, ((int)time & 2016) >> 5, ((int)time & 31) * 2); 
+      //return new DateTime((((int)date & 65024) >> 9) + 1980, ((int)date & 480) >> 5, 1, 11,11,11);
     }
 
     private void getFiles(TreeNode tn)
